@@ -5,6 +5,7 @@ import { recipe } from 'src/app/classes/recipe';
 import { user } from 'src/app/classes/user';
 import { RecipesService } from 'src/app/services/recipes.service';
 import { UsersService } from 'src/app/services/users.service';
+import { environment } from '../../../environment/environment'
 
 @Component({
   selector: 'app-home',
@@ -33,7 +34,7 @@ export class HomeComponent {
       return
     }
     let nameU: string = this.users.currentUser.firstName + " " + this.users.currentUser.lastName
-    if (nameU != userName) {
+    if (nameU != environment.managerName && nameU != userName) {
       alert("משתמשים פרטיים יכולים למחוק רק את המתכונים שהם הכניסו!!!")
       return
     }

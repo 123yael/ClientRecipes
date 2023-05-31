@@ -43,6 +43,7 @@ export class LogInComponent {
     // שליחה לפונקציה שבודקת האם המשתמש קיים במערכת
     // אם לא נשלח המשתמש להרשמה, אם כן עדכן המשתנה הגלובלי ומועבר לדף הבית
     this.users.getUserByNameAndPass(n, p).subscribe(u => {
+      debugger
       if (u == undefined)
         this.router.navigate(['/signUp']);
       else {

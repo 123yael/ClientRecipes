@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { user } from '../classes/user';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../environment/environment'
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class UsersService {
   currentUser: user = new user()
 
   // משתנה גלובלי לשם השרת
-  baseUrl: string = "http://localhost:8080/users/"
+  baseUrl: string = `${environment.baseUrl}users/`
 
   // משתנה ציבורים לגישה לשרת
   constructor(public httpClient: HttpClient) { }

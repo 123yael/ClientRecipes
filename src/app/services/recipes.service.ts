@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { recipe } from '../classes/recipe';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../environment/environment'
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +11,9 @@ export class RecipesService {
 
   arr: Array<recipe> = new Array<recipe>()
 
+  
   // משתנה גלובלי לשם השרת
-  baseUrl: string = "http://localhost:8080/recipes/"
+  baseUrl: string = `${environment.baseUrl}recipes/`
 
   // משתנה ציבורים לגישה לשרת
   constructor(public httpClient: HttpClient) { }
