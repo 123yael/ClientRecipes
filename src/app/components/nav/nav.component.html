@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-sm bg-light text-dark shadow">
+    <div class="container-fluid text-dark">
+        <ul class="navbar-nav text-dark">
+            <li class="nav-item">
+                <a class="nav-link text-dark" routerLink="home">דף הבית</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" routerLink="signUp">הרשם</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" routerLink="logIn">התחבר</a>
+            </li>
+            <li class="nav-item" *ngIf="users.currentUser.firstName != undefined">
+                <a class="nav-link text-dark" routerLink="addRecipe">הוספת מתכון</a>
+            </li>
+        </ul>
+        <input type="button" class="nav-link float-end" value="🌓" appDarkLight>
+
+    </div>
+</nav>
+
+<router-outlet></router-outlet>

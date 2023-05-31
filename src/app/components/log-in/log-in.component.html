@@ -1,0 +1,35 @@
+<form class="container my-5 py-5" [formGroup]="myForm" (ngSubmit)="check()">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card-group mb-0">
+                <div class="card p-4 bg-light text-dark">
+                    <div class="card-body">
+                        <h1>Login</h1>
+                        <p class="text-muted">Sign In to your account</p>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" formControlName="userName" placeholder="Username">
+                        </div>
+                        <div class="input-group mb-4">
+                            <input type="number" class="form-control" formControlName="pass" placeholder="Password">
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <button type="submit" class="btn btn-primary px-4 text-light">Login</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-white bg-primary py-5 d-md-down-none">
+                    <div class="card-body text-center">
+                        <div>
+                            <h2>Sign up</h2>
+                            <p>Not registered in the system yet? By clicking on registration,
+                                 you will be taken to registration immediately</p>
+                            <a routerLink="/signUp" class="btn btn-primary active mt-3 text-light">Register Now!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

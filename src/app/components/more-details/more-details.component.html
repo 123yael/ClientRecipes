@@ -1,0 +1,21 @@
+<div style="text-align: center" class="container border p-5 my-3 bg-light shadow text-dark">
+    <h1 class="p-2">{{recipe.name | toUpper}}</h1>
+    <h2>{{recipe.description}}</h2>
+    <p>level: {{recipe.level}}, duration: {{recipe.duration}}, numberOfDishes: {{recipe.numberOfDishes}}</p>
+    <p>userName: {{recipe.userName}}</p>
+    <hr />
+    <div class="row">
+        <div class="col-5">
+            <p style="text-align: left">{{"components:" | toUpper}} </p>
+            <ul style="text-align: left" *ngFor="let component of recipe.components">
+                <li>{{component.count}} {{component.name}}</li>
+            </ul>
+        </div>
+        <div class="col-7">
+            <img src="http://localhost:8080/{{recipe.img}}" width="100%" />
+        </div>
+    </div>
+    <hr />
+    <div><p class="bolder" style="text-align: left" >{{"Instructions:" | toUpper}}</p> {{recipe.Instructions}}</div>
+
+</div>

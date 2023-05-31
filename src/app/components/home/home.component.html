@@ -1,0 +1,14 @@
+<!-- <h2 style="text-align: center" class="my-4">רשימת מתכונים</h2> -->
+<div class="row mx-5 py-5" style="text-align: center">
+    <div *ngFor="let r of recipes.arr" class="col-md-4 col-xl-3 col-sm-6">
+        <div class="card m-2 shadow bg-light text-dark" style=" height: 350px;">
+            <img class="card-img-top" src="http://localhost:8080/{{r.img}}" alt="Card image" style="width:100%">
+            <div class="card-body">
+                <h4 class="card-title">{{r.name}}</h4>
+                <p class="card-text">level: {{r.level}}</p>
+                <a class="btn btn-primary text-light" (click)="mooveToMoreDetails(r)">{{"More details" | toUpper}}</a>
+                <button class="btn btn-outline-primary text-dark ml-5" (click)="dellRecipe(r.name!, r.userName!)">{{"dell 🗑" | toUpper}} </button>
+            </div>
+        </div>
+    </div>
+</div>
